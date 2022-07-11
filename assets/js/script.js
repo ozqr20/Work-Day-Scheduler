@@ -20,6 +20,6 @@ var checkTime = function(){
     }
 }
 
-
+console.log(Date.now());
 
 
