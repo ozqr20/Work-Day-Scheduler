@@ -11,6 +11,9 @@ $(document).ready(function(){
     });
 });
 
+// Not working it needs implementation 
+
+
 var checkTime = function(){
 
     var dt = new Date();
