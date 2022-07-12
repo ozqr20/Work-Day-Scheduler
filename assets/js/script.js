@@ -6,20 +6,45 @@ $(document).ready(function(){
 
 var checkTime = function(){
 
+    var dt = new Date();
+    var currentHr = dt.getHours();
 
-    for(var i = 9; i <= 17; i++){
-        if($.now() < i){
-            $("#hour-").addClass(".past");
-        }
-        if($.now()  === i){
-            $("#hour-").addClass(".present");
-        }
-        if ($.now()  > i) {
-            $("hour-").addClass(".future");
-        }
+    console.log(currentHr);
+
+    if(currentHr < 9){
+        $("#hour-").addClass("past");
     }
-}
+    else if (currentHr === 9){
+        $("#hour-").addClass("present");
+    }
+    else if (currentHr > 9) {
+        $("#hour-").addClass("future");
+    }
 
-console.log(Date.now());
+  };
+  
+
+const date = new Date($.now());
+console.log($('text').val(date.getHours()));
+
+console.log(date);
+
+checkTime = (hours) => {
+    const date = new Date($.now());
+    if (hours < date.getHours()) {
+        $('timeContainer').addClass('past');
+    } else if (hours == date.getHours()) {
+        $('timeContainer').addClass('present');
+    } else {
+        $('timeContainer').addClass('future');
+    }
+};
+
+$(document).ready(function(){
+    const time = $("#hour-").val(date.getHours());
+    checkTime(time);
+});
+
+checkTime();
 
 
