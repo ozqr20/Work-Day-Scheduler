@@ -1,7 +1,14 @@
 
-
 $(document).ready(function(){
     $("#currentDay").text(moment().format("dddd, MMMM Do"));
+});
+
+
+$(document).ready(function(){
+    $(".saveBtn").on("click", function(){
+        var hour = $(this).parent().attr("id");
+        var txt = $(this).siblings(".description").val();
+    });
 });
 
 var checkTime = function(){
@@ -22,6 +29,9 @@ var checkTime = function(){
     }
 
   };
+
+  var time = $(this).parent().id("hour-9")
+  alert(time);
   
 
 const date = new Date($.now());
@@ -46,5 +56,5 @@ $(document).ready(function(){
 });
 
 checkTime();
-    
+
 
