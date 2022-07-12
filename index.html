@@ -28,79 +28,76 @@
 
   <body>
     <header class="jumbotron d-flex flex-column align-items-center">
-      <h1 class="display-3">Work Day Scheduler</h1>
+      <h1 class="display-3 sm-d-3 md-d-3 d-flex flex-nowrap">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container ">
       <!-- Timeblocks go here -->
-      <div class="timeContainer row d-flex flex-nowrap ">
+      <div class="time-clock row d-flex flex-nowrap " id="hour-9">
         <div class="col-sm-1 col-md-1 col-xl-1 border-top border-right">9AM</div>
-        <div class="col-sm-10 col-md-10 col-xl-10" id="hour-9">two</div>
-        <button type="button" class="saveBtn">
-          <i class="saveBtn"><span class="col-sm-1 col-md-1 col-xl-1 oi oi-briefcase text-decoration-none"></span></i>
+        <textarea class=" description col-sm-10 col-md-10 col-xl-10"></textarea>  <!-- User imput -->
+        <button class="saveBtn">
+          <i class="fa fa-save col-sm-1 col-md-1 col-xl-1 text-decoration-none"></i>
         </button>
       </div>
-      <div class="timeContainer row d-flex flex-nowrap ">
+      <div class="time-clock row d-flex flex-nowrap " id="hour-9">
         <div class="col-sm-1 col-md-1 col-xl-1 border-top border-right">10AM</div>
-        <div class="col-sm-10 col-md-10 col-xl-10"  id="hour-10">two</div>
-        <button type="button" class="saveBtn">
-          <i class="saveBtn"><span class="col-sm-1 col-md-1 col-xl-1 oi oi-briefcase"></span></i>
+        <textarea class=" description col-sm-10 col-md-10 col-xl-10"></textarea>  <!-- User imput -->
+        <button class="saveBtn">
+          <i class="fa fa-save col-sm-1 col-md-1 col-xl-1 text-decoration-none"></i>
         </button>
       </div>
-      <div class="timeContainer row d-flex flex-nowrap ">
+      <div class="time-clock row d-flex flex-nowrap " id="hour-9">
         <div class="col-sm-1 col-md-1 col-xl-1 border-top border-right">11AM</div>
-        <div class="col-sm-10 col-md-10 col-xl-10" id="hour-11">two
-          <!-- <input type="text" placeholder="login hours" />
-          <input type="button" value="SUBMIT" />
-          <div>TEST DIV</div> -->
-        </div>
-        <button type="button" class="saveBtn">
-          <i class="saveBtn"><span class="col-sm-1 col-md-1 col-xl-1 oi oi-briefcase"></span></i>
+        <textarea class=" description col-sm-10 col-md-10 col-xl-10"></textarea>  <!-- User imput -->
+        <button class="saveBtn">
+          <i class="fa fa-save col-sm-1 col-md-1 col-xl-1 text-decoration-none"></i>
         </button>
       </div>
-      <div class="timeContainer row d-flex flex-nowrap ">
+      <div class="time-clock row d-flex flex-nowrap " id="hour-9">
         <div class="col-sm-1 col-md-1 col-xl-1 border-top border-right">12PM</div>
-        <div class="col-sm-10 col-md-10 col-xl-10" id="hour-12">two</div>
-        <button type="button" class="saveBtn">
-          <i class="saveBtn"><span class="col-sm-1 col-md-1 col-xl-1 oi oi-briefcase"></span></i>
+        <textarea class=" description col-sm-10 col-md-10 col-xl-10"></textarea>  <!-- User imput -->
+        <button class="saveBtn">
+          <i class="fa fa-save col-sm-1 col-md-1 col-xl-1 text-decoration-none"></i>
         </button>
       </div>
-      <div class="timeContainer row d-flex flex-nowrap ">
-        <div class="col-sm-1 col-md-1 col-xl-1 border-top border-right" >1PM</div>
-        <div class="col-sm-10 col-md-10 col-xl-10 " id="hour-13">two</div>
-        <button type="button" class="saveBtn">
-          <i class="saveBtn"><span class="col-sm-1 col-md-1 col-xl-1 oi oi-briefcase "></span></i>
+      <div class="time-clock row d-flex flex-nowrap " id="hour-9">
+        <div class="col-sm-1 col-md-1 col-xl-1 border-top border-right">1PM</div>
+        <textarea class=" description col-sm-10 col-md-10 col-xl-10"></textarea>  <!-- User imput -->
+        <button class="saveBtn">
+          <i class="fa fa-save col-sm-1 col-md-1 col-xl-1 text-decoration-none"></i>
         </button>
       </div>
-      <div class="timeContainer row d-flex flex-nowrap ">
-        <div class="col-sm-1 col-md-1 col-xl-1 border-top border-right" >2PM</div>
-        <div class="col-sm-10 col-md-10 col-xl-10" id="hour-14">two</div>
-        <button type="button" class="saveBtn">
-          <i class="saveBtn"><span class="col-sm-1 col-md-1 col-xl-1 oi oi-briefcase"></span></i>
+      <div class="time-clock row d-flex flex-nowrap " id="hour-9">
+        <div class="col-sm-1 col-md-1 col-xl-1 border-top border-right">2PM</div>
+        <textarea class=" description col-sm-10 col-md-10 col-xl-10"></textarea>  <!-- User imput -->
+        <button class="saveBtn">
+          <i class="fa fa-save col-sm-1 col-md-1 col-xl-1 text-decoration-none"></i>
         </button>
       </div>
-      <div class="timeContainer row d-flex flex-nowrap ">
+      <div class="time-clock row d-flex flex-nowrap " id="hour-9">
         <div class="col-sm-1 col-md-1 col-xl-1 border-top border-right">3PM</div>
-        <div class="col-sm-10 col-md-10 col-xl-10" id="hour-15">two</div>
-        <button type="button" class="saveBtn">
-          <i class="saveBtn"><span class="col-sm-1 col-md-1 col-xl-1 oi oi-briefcase"></span></i>
+        <textarea class=" description col-sm-10 col-md-10 col-xl-10"></textarea>  <!-- User imput -->
+        <button class="saveBtn">
+          <i class="fa fa-save col-sm-1 col-md-1 col-xl-1 text-decoration-none"></i>
         </button>
       </div>
-      <div class="timeContainer row d-flex flex-nowrap ">
+      <div class="time-clock row d-flex flex-nowrap " id="hour-9">
         <div class="col-sm-1 col-md-1 col-xl-1 border-top border-right">4PM</div>
-        <div class="col-sm-10 col-md-10 col-xl-10" id="hour-4">two</div>
-        <button type="button" class="saveBtn">
-          <i class="saveBtn"><span class="col-sm-1 col-md-1 col-xl-1 oi oi-briefcase"></span></i>
+        <textarea class=" description col-sm-10 col-md-10 col-xl-10"></textarea>  <!-- User imput -->
+        <button class="saveBtn">
+          <i class="fa fa-save col-sm-1 col-md-1 col-xl-1 text-decoration-none"></i>
         </button>
       </div>
-      <div class="timeContainer row d-flex flex-nowrap ">
+      <div class="time-clock row d-flex flex-nowrap " id="hour-9">
         <div class="col-sm-1 col-md-1 col-xl-1 border-top border-right">5PM</div>
-        <div class="col-sm-10 col-md-10 col-xl-10" id="hour-5">two</div>
-        <button type="button" class="saveBtn">
-          <i class="saveBtn"><span class="col-sm-1 col-md-1 col-xl-1 oi oi-briefcase"></span></i>
+        <textarea class=" description col-sm-10 col-md-10 col-xl-10"></textarea>  <!-- User imput -->
+        <button class="saveBtn">
+          <i class="fa fa-save col-sm-1 col-md-1 col-xl-1 text-decoration-none"></i>
         </button>
-        </div>
+      </div>
+      
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  <!--allow $ to work-->
