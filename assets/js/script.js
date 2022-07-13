@@ -4,60 +4,58 @@ $(document).ready(function(){
 });
 
 
+// once the user log into the website the document will run 
+
 $(document).ready(function(){
     $(".saveBtn").on("click", function(){
         var hour = $(this).parent().attr("id");
         var txt = $(this).siblings(".description").val();
+
+        localStorage.setItem(hour,txt);
     });
-});
 
-// Not working it needs implementation 
+    function checkTime(){
 
+        var now = moment().hour();
 
-var checkTime = function(){
+        $(".time-block").each(function(){
+            // point to the attribute id then separate hours with the id "hour" by explicit spliting it and change the string into an integer
+            var timeFrame = parseInt($(this).attr("id").split('hour')[0,1]);
+            console.log("timeFrame check" + timeFrame);
 
-    var dt = new Date();
-    var currentHr = dt.getHours();
+            //depending on the time the color will be change/remove 
 
-    console.log(currentHr);
+            if(timeFrame < now){
+                $(this).removeClass("future");
+                $(this).removeClass("present");
+                $(this).addClass("past");
+            }
+            else if(timeFrame === now) {
+                $(this).removeClass("future");
+                $(this).removeClass("past");
+                $(this).addClass("present");
+            }
+            else {
+                $(this).removeClass("past");
+                $(this).removeClass("present");
+                $(this).addClass("future");
+            };
+        });
+    }; // end checkTime
 
-    if(currentHr < 9){
-        $("#hour-").addClass("past");
-    }
-    else if (currentHr === 9){
-        $("#hour-").addClass("present");
-    }
-    else if (currentHr > 9) {
-        $("#hour-").addClass("future");
-    }
+    // adding the id and the user input into the local storage
+    $("#hour-9 .description").val(localStorage.getItem("hour-9"));
+    $("#hour-10 .description").val(localStorage.getItem("hour-10"));
+    $("#hour-11 .description").val(localStorage.getItem("hour-11"));
+    $("#hour-12 .description").val(localStorage.getItem("hour-12"));
+    $("#hour-13 .description").val(localStorage.getItem("hour-13"));
+    $("#hour-14 .description").val(localStorage.getItem("hour-14"));
+    $("#hour-15 .description").val(localStorage.getItem("hour-15"));
+    $("#hour-16 .description").val(localStorage.getItem("hour-16"));
+    $("#hour-17 .description").val(localStorage.getItem("hour-17"));
 
-  };
+    checkTime();
 
-  var time = $(this).parent().id("hour-9")
-  alert(time);
-  
-
-const date = new Date($.now());
-console.log($('text').val(date.getHours()));
-
-console.log(date);
-
-checkTime = (hours) => {
-    const date = new Date($.now());
-    if (hours < date.getHours()) {
-        $('timeContainer').addClass('past');
-    } else if (hours == date.getHours()) {
-        $('timeContainer').addClass('present');
-    } else {
-        $('timeContainer').addClass('future');
-    }
-};
-
-$(document).ready(function(){
-    const time = $("#hour-").val(date.getHours());
-    checkTime(time);
-});
-
-checkTime();
+}); // end of document 
 
 
