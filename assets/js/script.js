@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-    $("#currentDay").text(moment().format("dddd, MMMM Do"));
+    $("#currentDay").html(moment().format("dddd, MMMM Do"));
 });
 
 
@@ -17,17 +17,19 @@ $(document).ready(function(){
     function checkTime(){
 
         var now = moment().hour();
+        console.log(now);
 
+        
         $(".time-block").each(function(){
             // point to the attribute id then separate hours with the id "hour" by explicit spliting it and change the string into an integer
-            var timeFrame = parseInt($(this).attr("id").split('hour')[0,1]);
+            var timeFrame = parseInt($(this).attr("id").split('hour')[2]);
             console.log("timeFrame check" + timeFrame);
 
             //depending on the time the color will be change/remove 
 
             if(timeFrame < now){
-                $(this).removeClass("future");
                 $(this).removeClass("present");
+                $(this).removeClass("future");
                 $(this).addClass("past");
             }
             else if(timeFrame === now) {
