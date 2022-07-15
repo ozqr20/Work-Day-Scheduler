@@ -7,6 +7,7 @@
 * Bootstrap
 * Moment js
 * Flex
+* APIs
 ## Description of the project
 ### HTML
 * Has 9 rows and 3 columns for the layout
